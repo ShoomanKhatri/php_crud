@@ -1,0 +1,97 @@
+  ## table structure 
+
+  CREATE TABLE employees (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    salary INT(10) NOT NULL
+);
+
+## Insert 
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Ram Bahadur', 'Kathmandu', 40000);
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Sita Kumari', 'Pokhara', 45000);
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Bikash Shrestha', 'Lalitpur', 60000);
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Puja Thapa', 'Bhaktapur', 55000);
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Ramesh Adhikari', 'Biratnagar', 50000);
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Sunita Rana', 'Dharan', 47000);
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Keshav Sapkota', 'Chitwan', 52000);
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Anita Gurung', 'Butwal', 48000);
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Rajendra Poudel', 'Hetauda', 53000);
+
+INSERT INTO employees (name, address, salary) 
+VALUES ('Prakash Karki', 'Janakpur', 51000);
+
+
+##select  
+
+SELECT * FROM employees;
+
+SELECT * FROM employees WHERE id = 1;
+
+SELECT * FROM employees WHERE name = 'Ram Bahadur';
+
+SELECT * FROM employees WHERE salary > 50000;
+
+
+ Select Employees Ordered by Salary
+   Ascending Order:
+SELECT * FROM employees ORDER BY salary ASC;
+
+  Descending Order:
+SELECT * FROM employees ORDER BY salary DESC;
+
+
+
+## update
+
+UPDATE employees 
+SET salary = 60000 
+WHERE id = 1;
+
+UPDATE employees 
+SET name = 'Ramesh Shrestha' 
+WHERE address = 'Pokhara';
+
+
+UPDATE employees 
+SET address = 'Lalitpur', salary = 62000 
+WHERE name = 'Ram Bahadur';
+
+
+
+
+## delete
+
+DELETE FROM employees 
+WHERE id = 2;
+
+
+DELETE FROM employees 
+WHERE name = 'Sita Kumari';
+
+
+DELETE FROM employees 
+WHERE salary < 50000;
+
+
+DELETE FROM employees 
+WHERE address = 'Dharan';
+

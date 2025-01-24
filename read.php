@@ -4,9 +4,15 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
     $id = trim($_GET["id"]);
     $sql = "SELECT * FROM employees WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
+
+    // echo "<script>console.log(".json_encode($result)")</script>"; this will not work
+
     
     if ($result && mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+         
+        echo "<script>console.log(" . json_encode($row) . ");</script>";
+
         $name = $row["name"];
         $address = $row["address"];
         $salary = $row["salary"];
